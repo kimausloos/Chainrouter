@@ -14,23 +14,22 @@ class ChainRouterRouter implements RouterInterface {
     private $context;
     private $routeCollection;
     private $urlGenerator;
+    private $container;
 
     public function __construct($container) {
-        $this->context = new RequestContext();
-        $this->context->fromRequest($container->get('request'));
+        $this->container = $container;
 
         $this->routeCollection = new RouteCollection();
 
-        $this->routeCollection->add('test_route_greet', new Route('/hello/{name}', array('_controller' => 'KunstmaanChainrouterBundle:Default:index')));
+        $this->routeCollection->add('test_route_greet', new Route('/{_locale}/hello/{name}', array('_controller' => 'KunstmaanChainrouterBundle:Default:index')));
     }
-
 
     public function getRouteCollection() {
         return $this->routeCollection;
     }
 
     public function match($pathinfo) {
-        $urlMatcher = new UrlMatcher($this->routeCollection, $this->context);
+        $urlMatcher = new UrlMatcher($this->routeCollection, $this->getContext());
 
         return $urlMatcher->match($pathinfo);
     }
@@ -62,6 +61,10 @@ class ChainRouterRouter implements RouterInterface {
      */
     public function getContext()
     {
+        if(!isset($this->context)) {
+            $this->context = new RequestContext();
+            $this->context->fromRequest($this->container->get('request'));
+        }
         return $this->context;
     }
 }

@@ -14,14 +14,14 @@ class AlternativeChainRouterRouter implements RouterInterface {
     private $context;
     private $routeCollection;
     private $urlGenerator;
+    private $container;
 
     public function __construct($container) {
-        $this->context = new RequestContext();
-        $this->context->fromRequest($container->get('request'));
+        $this->container = $container;
 
         $this->routeCollection = new RouteCollection();
 
-        $this->routeCollection->add('test_route_greet', new Route('/{name}/hello', array('_controller' => 'KunstmaanChainrouterBundle:Default:alternative')));
+        $this->routeCollection->add('test_alternativeroute_greet', new Route('/{name}/hello', array('_controller' => 'KunstmaanChainrouterBundle:Default:alternative')));
     }
 
     public function getRouteCollection() {
@@ -29,7 +29,7 @@ class AlternativeChainRouterRouter implements RouterInterface {
     }
 
     public function match($pathinfo) {
-        $urlMatcher = new UrlMatcher($this->routeCollection, $this->context);
+        $urlMatcher = new UrlMatcher($this->routeCollection, $this->getContext());
 
         return $urlMatcher->match($pathinfo);
     }
@@ -61,6 +61,10 @@ class AlternativeChainRouterRouter implements RouterInterface {
      */
     public function getContext()
     {
+        if(!isset($this->context)) {
+            $this->context = new RequestContext();
+            $this->context->fromRequest($this->container->get('request'));
+        }
         return $this->context;
     }
 }
