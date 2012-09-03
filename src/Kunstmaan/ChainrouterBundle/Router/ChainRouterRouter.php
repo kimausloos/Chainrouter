@@ -21,7 +21,7 @@ class ChainRouterRouter implements RouterInterface {
 
         $this->routeCollection = new RouteCollection();
 
-        $this->routeCollection->add('test_route_greet', new Route('/{_locale}/hello/{name}', array('_controller' => 'KunstmaanChainrouterBundle:Default:index')));
+        $this->routeCollection->add('test_route_greet', new Route('/hello/{name}', array('_controller' => 'KunstmaanChainrouterBundle:Default:index')));
     }
 
     public function getRouteCollection() {
