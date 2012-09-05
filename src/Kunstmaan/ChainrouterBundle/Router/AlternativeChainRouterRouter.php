@@ -21,7 +21,11 @@ class AlternativeChainRouterRouter implements RouterInterface {
 
         $this->routeCollection = new RouteCollection();
 
-        $this->routeCollection->add('test_alternativeroute_greet', new Route('/{name}/hello', array('_controller' => 'KunstmaanChainrouterBundle:Default:alternative')));
+        $localeRouteCollection = new RouteCollection();
+
+        $localeRouteCollection->add('test_alternativeroute_greet', new Route('/{name}/hello', array('_controller' => 'KunstmaanChainrouterBundle:Default:alternative')));
+
+        $this->routeCollection->addCollection($localeRouteCollection, '/{_locale}');
     }
 
     public function getRouteCollection() {

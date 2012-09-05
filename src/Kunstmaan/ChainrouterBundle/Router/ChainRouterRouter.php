@@ -8,6 +8,7 @@ use Symfony\Component\Routing\RequestContext;
 use Symfony\Component\Routing\RouteCollection;
 use Symfony\Component\Routing\Matcher\UrlMatcher;
 use Symfony\Component\Routing\Generator\UrlGenerator;
+use Symfony\Component\HttpFoundation\Request;
 
 class ChainRouterRouter implements RouterInterface {
 
@@ -21,12 +22,14 @@ class ChainRouterRouter implements RouterInterface {
 
         $this->routeCollection = new RouteCollection();
 
-        $this->routeCollection->add('test_route_greet', new Route('/hello/{name}', array('_controller' => 'KunstmaanChainrouterBundle:Default:index')));
+        $this->routeCollection->add('test_route_greet', new Route('/{_locale}/hello/{name}', array('_controller' => 'KunstmaanChainrouterBundle:Default:index')));
     }
+
 
     public function getRouteCollection() {
         return $this->routeCollection;
     }
+
 
     public function match($pathinfo) {
         $urlMatcher = new UrlMatcher($this->routeCollection, $this->getContext());
@@ -34,11 +37,13 @@ class ChainRouterRouter implements RouterInterface {
         return $urlMatcher->match($pathinfo);
     }
 
+
     public function generate($name, $parameters = array(), $absolute = false) {
         $this->urlGenerator = new UrlGenerator($this->routeCollection, $this->context);
 
         return $this->urlGenerator->generate($name, $parameters, $absolute);
     }
+
 
     /**
      * Sets the request context.
@@ -51,6 +56,7 @@ class ChainRouterRouter implements RouterInterface {
     {
         $this->context = $context;
     }
+
 
     /**
      * Gets the request context.

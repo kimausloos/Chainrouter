@@ -40,8 +40,8 @@
         {
             "package": "doctrine/doctrine-bundle",
             "version": "dev-master",
-            "source-reference": "8e1149b0ac01e8f9441a523bec81011803485602",
-            "commit-date": "1346369162"
+            "source-reference": "3600872919186e1a40e8fd556e65f6dca6337cc9",
+            "commit-date": "1346617185"
         },
         {
             "package": "doctrine/doctrine-fixtures-bundle",
@@ -68,14 +68,20 @@
         {
             "package": "friendsofsymfony/user-bundle",
             "version": "dev-master",
-            "source-reference": "28d83c32e3dfcb0b3b6b4f16233cbe374b4d55a6",
-            "commit-date": "1346283861"
+            "source-reference": "24edb2f2e83b227a4ba24180c69758005e805991",
+            "commit-date": "1346829941"
         },
         {
             "package": "gedmo/doctrine-extensions",
             "version": "dev-master",
-            "source-reference": "8fa580a58e73550b3f729e420d078784b154013f",
-            "commit-date": "1346185701"
+            "alias-pretty-version": "2.3.x-dev",
+            "alias-version": "2.3.9999999.9999999-dev"
+        },
+        {
+            "package": "gedmo/doctrine-extensions",
+            "version": "dev-master",
+            "source-reference": "4e8a3a920eedaba4e76c26a92347e9b47bb7ffdf",
+            "commit-date": "1346486653"
         },
         {
             "package": "imagine/Imagine",
@@ -98,8 +104,14 @@
         {
             "package": "jms/di-extra-bundle",
             "version": "dev-master",
-            "source-reference": "1.1.0-RC",
-            "commit-date": "1345140102"
+            "alias-pretty-version": "1.2.x-dev",
+            "alias-version": "1.2.9999999.9999999-dev"
+        },
+        {
+            "package": "jms/di-extra-bundle",
+            "version": "dev-master",
+            "source-reference": "a949d13485eff40b5672d29a136f3ecd34ed0f85",
+            "commit-date": "1346498128"
         },
         {
             "package": "jms/metadata",
@@ -107,21 +119,9 @@
         },
         {
             "package": "jms/security-extra-bundle",
-            "version": "dev-master",
-            "alias-pretty-version": "1.2.x-dev",
-            "alias-version": "1.2.9999999.9999999-dev"
-        },
-        {
-            "package": "jms/security-extra-bundle",
-            "version": "dev-master",
-            "alias-pretty-version": "1.3.x-dev",
-            "alias-version": "1.3.9999999.9999999-dev"
-        },
-        {
-            "package": "jms/security-extra-bundle",
-            "version": "dev-master",
-            "source-reference": "fac2245eb61e39a8bb8531c967729f74c309a9a1",
-            "commit-date": "1346345735"
+            "version": "1.2.x-dev",
+            "source-reference": "81070f525ec24f9e6cf6509532b260bc54c42ea5",
+            "commit-date": "1346345841"
         },
         {
             "package": "knplabs/gaufrette",
@@ -162,8 +162,8 @@
         {
             "package": "kriswallsmith/assetic",
             "version": "dev-master",
-            "source-reference": "0410297526eacc3aa2146b55bc4e30e6fd3a50ed",
-            "commit-date": "1346167888"
+            "source-reference": "86b637e9f64ddcbd17d9eda944384812b5836254",
+            "commit-date": "1346695911"
         },
         {
             "package": "kunstmaan/admin-bundle",
@@ -174,8 +174,8 @@
         {
             "package": "kunstmaan/adminlist-bundle",
             "version": "2.0.x-dev",
-            "source-reference": "4b00a68942059e9265d6a7e3d4a28b011038daf0",
-            "commit-date": "1344592758"
+            "source-reference": "4daa6fc9cd1220e79e58fa4f81421b3f77e24686",
+            "commit-date": "1346670916"
         },
         {
             "package": "kunstmaan/adminnode-bundle",
@@ -246,8 +246,8 @@
         {
             "package": "liip/monitor-bundle",
             "version": "dev-master",
-            "source-reference": "f3aadf42ab6f8f7ee1ef8c55913b07c27389cb9c",
-            "commit-date": "1335079370"
+            "source-reference": "2cbff906317e26321477cecaeae836832cebcd4f",
+            "commit-date": "1346686122"
         },
         {
             "package": "liip/monitor-extra-bundle",
@@ -270,8 +270,8 @@
         {
             "package": "raven/raven",
             "version": "dev-master",
-            "source-reference": "bb03f165805dbaa0177775178377d8955acaa20a",
-            "commit-date": "1345803063"
+            "source-reference": "fc9589feb4c39a16c4d3e5846a3749034767237e",
+            "commit-date": "1346793389"
         },
         {
             "package": "ruflin/Elastica",
@@ -316,12 +316,6 @@
         {
             "package": "stof/doctrine-extensions-bundle",
             "version": "dev-master",
-            "alias-pretty-version": "1.1.x-dev",
-            "alias-version": "1.1.9999999.9999999-dev"
-        },
-        {
-            "package": "stof/doctrine-extensions-bundle",
-            "version": "dev-master",
             "source-reference": "0247e6f1658d76292c8ffe2c5106090bd36bd799",
             "commit-date": "1346283670"
         },
@@ -358,8 +352,8 @@
         {
             "package": "symfony-cmf/routing-extra-bundle",
             "version": "dev-master",
-            "source-reference": "67cc5e405f6a95d0a34b2e9f1807d19dad064113",
-            "commit-date": "1346266547"
+            "source-reference": "884424d19204a9ad2036c5686b071301fe4abc32",
+            "commit-date": "1346705957"
         },
         {
             "package": "symfony/assetic-bundle",
@@ -406,8 +400,8 @@
         {
             "package": "symfony/symfony",
             "version": "dev-master",
-            "source-reference": "0f61b2eb90f40e0665aed9ce82b94e6cfee7f07e",
-            "commit-date": "1346406946"
+            "source-reference": "1dd153205b1db5b9ddcb4bfd4825ce6b8c4f41e7",
+            "commit-date": "1346770195"
         },
         {
             "package": "twig/extensions",
@@ -418,8 +412,8 @@
         {
             "package": "twig/extensions",
             "version": "dev-master",
-            "source-reference": "v1.0.0-alpha",
-            "commit-date": "1346166263"
+            "source-reference": "f904575642b1213db69b4a98f08397e722ba1cae",
+            "commit-date": "1346770278"
         },
         {
             "package": "twig/twig",

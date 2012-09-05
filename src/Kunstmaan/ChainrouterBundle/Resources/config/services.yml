@@ -1,0 +1,16 @@
+parameters:
+    kunstmaan_chainrouter.chainrouter.class:              Kunstmaan\ChainrouterBundle\Router\ChainRouterRouter
+    kunstmaan_chainrouter.chainrouter.alternativeclass:   Kunstmaan\ChainrouterBundle\Router\AlternativeChainRouterRouter
+
+services:
+    kunstmaan_chainrouter.chainrouterexample:
+        class:        %kunstmaan_chainrouter.chainrouter.class%
+        arguments:    [@service_container]
+        tags:
+                    -  { name: router, priority: 1000 }
+
+    kunstmaan_chainrouter.alternativechainrouterexample:
+        class:        %kunstmaan_chainrouter.chainrouter.alternativeclass%
+        arguments:    [@service_container]
+        tags:
+                    -  { name: router, priority: 1100 }
